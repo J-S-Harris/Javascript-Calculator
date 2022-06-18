@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+    border: none;
+    text-align: left;
+}
+
+#topbanner {
+    background-color: #1f2937;
+    color: white;   
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+/*    padding-left: 20px;*/
+    font-size:16px;
+    margin-right: 17px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+}
+
+#container {
+    margin-top: 25px;
+}
+
+#secondaryContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#secondaryContainer * {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    font-size: 100px;    
+}
+
+#clear {
+    border-bottom-right-radius: 30px;
+    width: 50%;
+    background-color: lightpink;
+}
+
+#one,
+#two,
+#three,
+#seven,
+#eight,
+#nine {
+    background-color: beige;
+}
+
+#four,
+#five,
+#six {
+    background-color: peachpuff;
+}
+
+#divide {
+    border-bottom-left-radius: 30px;
+}
+
+#divide,
+#times,
+#minus,
+#plus {
+    background-color: lightgreen;
+    width: 25%;
+    font-size: 100px;
+}
+
+#equals {
+    background-color: pink;
+}
+
+#display {
+    background-color: lightblue;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-size: auto;
+    height: 100px;
+    width: 100%;
+}
+
+@keyframes growHover {
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 3px black;
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+.buttons * {
+    border: 0.1px solid white;
+}
+
+
+.buttons *:hover,
+#plus:hover,
+#minus:hover,
+#times:hover,
+#divide:hover {
+    animation-name: growHover;
+    animation-duration: 0.4s;        
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 1000px) {
+ 
+#topbanner {
+    font-size: 15px;
+}
+
+#displayContainer {
+    width: 85%;
+}
+
+#secondaryContainer * {
+    width: 85%;
+}
+#display {
+    width: 100%;
+}
+
+}
